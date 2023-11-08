@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom assignment</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>color change</h1>
+    <section id="color-box" style="height: 200px; width: 200px">
+        <input type="text" id="color-input" placeholder="Enter a color">
+    </section>
+    <button>change color</button>
+    
+</body>
+<script>
+    const btn = document.querySelector("button")
+    const colorBox = document.getElementById("color-box")
+    const colorInput = document.getElementById("color-input")
+
+    btn.addEventListener('click', changeColor)
+
+    function changeColor(){
+        let color = colorInput.value
+        color = color.toLowerCase()
+        let bcolor
+
+
+        color == "red" ? bcolor = 'red' :
+        color == "blue" ? bcolor = 'blue' :
+        color == "green" ? bcolor = 'green' :
+        (colorInput.value= "invalid")
+
+        return colorBox.style.background = bcolor
+    }
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+</body>
+<script>
+
+    const english = prompt('English score')*1
+    const maths =prompt('Maths score')*1 
+
+    const average = (english + maths)/2
+    let remark
+
+     average >= 70 ? remark  ='Excellent' :
+     average >= 60 ? remark  ='Very good' :
+     average >= 50 ? remark  = 'Good'  : remark = 'Fail' 
+
+    alert(remark)
+
+
+</script>
+</html>
